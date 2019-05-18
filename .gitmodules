@@ -1,0 +1,3 @@
+[submodule "BatteryInfo"]
+	path = BatteryInfo
+	url = https://github.com/sowa705/BatteryInfo
