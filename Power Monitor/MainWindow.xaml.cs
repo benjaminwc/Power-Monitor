@@ -67,6 +67,7 @@ namespace Power_Monitor
                 TimeRemain.Content = "?";
                 Voltage.Content = "?";
                 BatteryState.Content = "Battery unavailable";
+                Icon.Source = ImageSourceForBitmap(Power_Monitor.Properties.Resources.UIcon);
                 ((GradientBrush)BatteryGrad.Fill).GradientStops[0].Color = System.Windows.Media.Color.FromRgb(255, 128, 0);
                 ((GradientBrush)BatteryGrad.Fill).GradientStops[1].Color = System.Windows.Media.Color.FromRgb(255, 128, 0);
             }
@@ -133,7 +134,7 @@ namespace Power_Monitor
         public void GraphUpdate()
         {
             gindex++;
-            if (gindex>=2)
+            if (gindex>=20)
             {
                 gindex = 0;
                 Array.Copy(ChargeRate, 1, ChargeRate, 0, ChargeRate.Length - 1);
@@ -234,6 +235,13 @@ namespace Power_Monitor
         private void GraphTypeCombo_SelectionChanged(object sender, EventArgs e)
         {
             DrawGraph();
+        }
+
+        private void SettingsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Settings s = new Settings();
+            s.Show();
+            
         }
     }
 }

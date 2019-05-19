@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Power_Monitor"
         mc:Ignorable="d"
-        Title="Battery Monitor" Height="450" Width="670">
+        Title="Power Monitor" Height="450" Width="670">
     <Grid x:Name="MainGrid" Background="#FFEEEEEE" SizeChanged="WindowSize">
         <Grid HorizontalAlignment="Right" Height="300" VerticalAlignment="Center" Width="300" Margin="0">
             <Image Margin="0" Source="Battery.png" Panel.ZIndex="1">
@@ -27,13 +27,13 @@
             <Label x:Name="ChargeText" Content="-%" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" FontSize="36" FontFamily="Segoe UI Semibold"/>
         </Grid>
         <Label x:Name="BatteryState" Content="Updating..." HorizontalAlignment="Left" Margin="63,6,0,0" VerticalAlignment="Top" FontSize="28" Height="58" FontFamily="Segoe UI Semibold" VerticalContentAlignment="Center"/>
-        <Image x:Name="Icon" HorizontalAlignment="Left" Height="48" Margin="10,10,0,0" VerticalAlignment="Top" Width="48" Source="BIcon.png"/>
+        <Image x:Name="Icon" HorizontalAlignment="Left" Height="48" Margin="10,10,0,0" VerticalAlignment="Top" Width="48" Source="UIcon.png"/>
         <Rectangle x:Name="GraphRect" Margin="25,203,305,60" Stroke="Black" StrokeThickness="0" Fill="#FFD6D6D6" RadiusX="5" RadiusY="5"/>
-        <Label Content="Nominal capacity:" HorizontalAlignment="Left" Margin="25,69,0,0" VerticalAlignment="Top"/>
-        <Label Content="Real capacity:" HorizontalAlignment="Left" Margin="25,95,0,0" VerticalAlignment="Top"/>
-        <Label Content="Current voltage:" HorizontalAlignment="Left" Margin="25,121,0,0" VerticalAlignment="Top"/>
-        <Label Content="Time Remaining:" HorizontalAlignment="Left" Margin="25,147,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="SettingsBtn" Content="Settings" HorizontalAlignment="Right" Margin="0,0,14,14" VerticalAlignment="Bottom" Width="93" Height="33" BorderBrush="{x:Null}" BorderThickness="0" Background="#FFCFCFCF" FontFamily="Segoe UI Semibold" IsEnabled="False"/>
+        <Label Content="Nominal capacity:" HorizontalAlignment="Left" Margin="25,69,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold"/>
+        <Label Content="Real capacity:" HorizontalAlignment="Left" Margin="25,95,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold"/>
+        <Label Content="Current voltage:" HorizontalAlignment="Left" Margin="25,121,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold"/>
+        <Label Content="Time Remaining:" HorizontalAlignment="Left" Margin="25,147,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold"/>
+        <Button x:Name="SettingsBtn" Content="Settings" HorizontalAlignment="Right" Margin="0,0,14,14" VerticalAlignment="Bottom" Width="93" Height="33" BorderBrush="{x:Null}" BorderThickness="0" Background="#FFCFCFCF" FontFamily="Segoe UI Semibold" Click="SettingsBtn_Click"/>
         <Label x:Name="NomCap" Content="- Wh" HorizontalAlignment="Left" Margin="134,69,0,0" VerticalAlignment="Top"/>
         <Label x:Name="RealCap" Content="- Wh (-%)" HorizontalAlignment="Left" Margin="134,95,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Voltage" Content="- V" HorizontalAlignment="Left" Margin="134,121,0,0" VerticalAlignment="Top"/>
@@ -42,7 +42,7 @@
             <ComboBoxItem Content="Percentage" FontFamily="Segoe UI Semibold"/>
             <ComboBoxItem Content="Discharge rate" FontFamily="Segoe UI Semibold"/>
         </ComboBox>
-        <Label x:Name="ChargeRateLabel" Content="Charge rate:" HorizontalAlignment="Left" Margin="25,173,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="ChargeRateLabel" Content="Charge rate:" HorizontalAlignment="Left" Margin="25,173,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold"/>
         <Label x:Name="ChgRate" Content="- W" HorizontalAlignment="Left" Margin="134,173,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
