@@ -19,14 +19,14 @@
             <Rectangle x:Name="BatteryGrad" Margin="1" Stroke="Black" StrokeThickness="0">
                 <Rectangle.Fill>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFBFBFBF" Offset="0.398"/>
-                        <GradientStop Color="Red" Offset="0.398"/>
+                        <GradientStop Color="#FFFF9804" Offset="0.398"/>
+                        <GradientStop Color="#FFFF9700" Offset="0.398"/>
                     </LinearGradientBrush>
                 </Rectangle.Fill>
             </Rectangle>
-            <Label x:Name="ChargeText" Content="13%" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" FontSize="36" FontFamily="Segoe UI Semibold"/>
+            <Label x:Name="ChargeText" Content="-%" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" FontSize="36" FontFamily="Segoe UI Semibold"/>
         </Grid>
-        <Label x:Name="BatteryState" Content="Discharging" HorizontalAlignment="Left" Margin="63,6,0,0" VerticalAlignment="Top" FontSize="28" Height="58" FontFamily="Segoe UI Semibold" VerticalContentAlignment="Center"/>
+        <Label x:Name="BatteryState" Content="Updating..." HorizontalAlignment="Left" Margin="63,6,0,0" VerticalAlignment="Top" FontSize="28" Height="58" FontFamily="Segoe UI Semibold" VerticalContentAlignment="Center"/>
         <Image x:Name="Icon" HorizontalAlignment="Left" Height="48" Margin="10,10,0,0" VerticalAlignment="Top" Width="48" Source="BIcon.png"/>
         <Rectangle x:Name="GraphRect" Margin="25,203,305,60" Stroke="Black" StrokeThickness="0" Fill="#FFD6D6D6" RadiusX="5" RadiusY="5"/>
         <Label Content="Nominal capacity:" HorizontalAlignment="Left" Margin="25,69,0,0" VerticalAlignment="Top"/>
@@ -34,15 +34,15 @@
         <Label Content="Current voltage:" HorizontalAlignment="Left" Margin="25,121,0,0" VerticalAlignment="Top"/>
         <Label Content="Time Remaining:" HorizontalAlignment="Left" Margin="25,147,0,0" VerticalAlignment="Top"/>
         <Button x:Name="SettingsBtn" Content="Settings" HorizontalAlignment="Right" Margin="0,0,14,14" VerticalAlignment="Bottom" Width="93" Height="33" BorderBrush="{x:Null}" BorderThickness="0" Background="#FFCFCFCF" FontFamily="Segoe UI Semibold" IsEnabled="False"/>
-        <Label x:Name="NomCap" Content="45 Wh" HorizontalAlignment="Left" Margin="134,69,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="RealCap" Content="37 Wh (87%)" HorizontalAlignment="Left" Margin="134,95,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Voltage" Content="11,57 V" HorizontalAlignment="Left" Margin="134,121,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="TimeRemain" Content="3:12" HorizontalAlignment="Left" Margin="134,147,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="NomCap" Content="- Wh" HorizontalAlignment="Left" Margin="134,69,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="RealCap" Content="- Wh (-%)" HorizontalAlignment="Left" Margin="134,95,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Voltage" Content="- V" HorizontalAlignment="Left" Margin="134,121,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="TimeRemain" Content="-" HorizontalAlignment="Left" Margin="134,147,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="GraphTypeCombo" HorizontalAlignment="Left" Margin="25,0,0,14" VerticalAlignment="Bottom" Width="171" Height="33" SelectedIndex="0" VerticalContentAlignment="Center" Background="Gainsboro" FontFamily="Segoe UI Semibold" DropDownClosed="GraphTypeCombo_SelectionChanged">
             <ComboBoxItem Content="Percentage" FontFamily="Segoe UI Semibold"/>
             <ComboBoxItem Content="Discharge rate" FontFamily="Segoe UI Semibold"/>
         </ComboBox>
         <Label x:Name="ChargeRateLabel" Content="Charge rate:" HorizontalAlignment="Left" Margin="25,173,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="ChgRate" Content="25 W" HorizontalAlignment="Left" Margin="134,173,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="ChgRate" Content="- W" HorizontalAlignment="Left" Margin="134,173,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
