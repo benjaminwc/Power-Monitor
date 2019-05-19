@@ -92,7 +92,7 @@ namespace Power_Monitor
                     }
                     
                 }
-                RealCap.Content= (Math.Round(battery.RealCapacity * 10) / 10f) + " Wh";
+                RealCap.Content= (Math.Round(battery.RealCapacity * 10) / 10f) + $" Wh ({Math.Round((battery.RealCapacity/battery.NominalCapacity)*100)}%)";
                 NomCap.Content = (Math.Round(battery.NominalCapacity * 10) / 10f) + " Wh";
                 Voltage.Content = (Math.Round(battery.CurrentVoltage * 100) / 100f) + " V";
                 

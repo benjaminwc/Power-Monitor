@@ -33,7 +33,7 @@
         <Label Content="Real capacity:" HorizontalAlignment="Left" Margin="25,95,0,0" VerticalAlignment="Top"/>
         <Label Content="Current voltage:" HorizontalAlignment="Left" Margin="25,121,0,0" VerticalAlignment="Top"/>
         <Label Content="Time Remaining:" HorizontalAlignment="Left" Margin="25,147,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="SettingsBtn" Content="Settings" HorizontalAlignment="Right" Margin="0,0,14,14" VerticalAlignment="Bottom" Width="93" Height="33" BorderBrush="{x:Null}" BorderThickness="0" Background="#FFCFCFCF" FontFamily="Segoe UI Semibold"/>
+        <Button x:Name="SettingsBtn" Content="Settings" HorizontalAlignment="Right" Margin="0,0,14,14" VerticalAlignment="Bottom" Width="93" Height="33" BorderBrush="{x:Null}" BorderThickness="0" Background="#FFCFCFCF" FontFamily="Segoe UI Semibold" IsEnabled="False"/>
         <Label x:Name="NomCap" Content="45 Wh" HorizontalAlignment="Left" Margin="134,69,0,0" VerticalAlignment="Top"/>
         <Label x:Name="RealCap" Content="37 Wh (87%)" HorizontalAlignment="Left" Margin="134,95,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Voltage" Content="11,57 V" HorizontalAlignment="Left" Margin="134,121,0,0" VerticalAlignment="Top"/>
