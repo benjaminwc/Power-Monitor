@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -93,6 +94,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Battery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BIcon.png" />
+    <Resource Include="CIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BatteryInfo\BatteryInfo\BatteryInfo.csproj">
+      <Project>{A012E4BA-0C23-4B1F-9AD7-BA0FEAE0BBF3}</Project>
+      <Name>BatteryInfo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
