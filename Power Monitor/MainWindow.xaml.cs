@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -29,19 +30,31 @@ namespace Power_Monitor
         {
             InitializeComponent();
             battery = new Battery();
-            UpdateTask();
+            System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+            dispatcherTimer.Tick += UpdateTask;
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 2);
+            dispatcherTimer.Start();
+            CreateLines();
         }
 
-        public async Task UpdateTask()
+        public void UpdateTask(object sender, EventArgs e)
         {
-            CreateLines();
-            while (true)
+            battery.Update();
+            GraphUpdate();
+            UIUpdate();
+        }
+        public static Task Delay(double milliseconds)
+        {
+            var tcs = new TaskCompletionSource<bool>();
+            System.Timers.Timer timer = new System.Timers.Timer();
+            timer.Elapsed += (obj, args) =>
             {
-                battery.Update();
-                GraphUpdate();
-                UIUpdate();
-                await Task.Delay(2000);
-            }
+                tcs.TrySetResult(true);
+            };
+            timer.Interval = milliseconds;
+            timer.AutoReset = false;
+            timer.Start();
+            return tcs.Task;
         }
         public void UIUpdate()
         {
